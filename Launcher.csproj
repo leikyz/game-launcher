@@ -1,0 +1,153 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <TargetFramework>net6.0-windows</TargetFramework>
+	  <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\JosefinSans-Italic-VariableFont_wght.ttf" />
+    <None Remove="Fonts\JosefinSans-VariableFont_wght.ttf" />
+    <None Remove="Fonts\MADE TOMMY Bold_PERSONAL USE.otf" />
+    <None Remove="Fonts\One Slice.otf" />
+    <None Remove="Fonts\Sectar.otf" />
+    <None Remove="Resources\bg.jpg" />
+    <None Remove="Resources\bignews.png" />
+    <None Remove="Resources\side.jpg" />
+    <None Remove="Visiongrand.png" />
+    <None Remove="Resources\bg-forum.jpg" />
+    <None Remove="Resources\bg-forum.png" />
+    <None Remove="Resources\bg11.png" />
+    <None Remove="Resources\bg3.jpg" />
+    <None Remove="Resources\bg4.jpg" />
+    <None Remove="Resources\bg5.jpg" />
+    <None Remove="Resources\bg6.jpg" />
+    <None Remove="Resources\bggrey.jpg" />
+    <None Remove="Resources\bgs.jpg" />
+    <None Remove="Resources\discord.png" />
+    <None Remove="Resources\logodofus.png" />
+    <None Remove="Resources\logodofus2.png" />
+    <None Remove="Resources\minilogo.png" />
+    <None Remove="Resources\minus.png" />
+    <None Remove="Resources\minus2.png" />
+    <None Remove="Resources\Vision2.png" />
+    <None Remove="Resources\mob.png" />
+    <None Remove="Resources\mobbleu.png" />
+    <None Remove="Resources\mobrouge%28.png" />
+    <None Remove="Resources\mobrouge.png" />
+    <None Remove="Resources\newclose.png" />
+    <None Remove="Resources\newclose2.png" />
+    <None Remove="Resources\newclose3.png" />
+    <None Remove="Resources\newgear.png" />
+    <None Remove="Resources\news.png" />
+    <None Remove="Resources\parameters.png" />
+    <None Remove="Resources\reload.png" />
+    <None Remove="Resources\reload2.png" />
+    <None Remove="Resources\reload3.png" />
+    <None Remove="Resources\repair.png" />
+    <None Remove="Resources\site.png" />
+  </ItemGroup>
+
+
+  
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Renci.SshNet.Async" Version="1.4.0" />
+    <PackageReference Include="SSH.NET" Version="2023.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+	  
+  </ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Fonts\HIROMISAKE.ttf">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Fonts\JosefinSans-Italic-VariableFont_wght.ttf" />
+	  <Resource Include="Fonts\JosefinSans-VariableFont_wght.ttf" />
+	  <Resource Include="Fonts\MADE TOMMY Bold_PERSONAL USE.otf" />
+	  <Resource Include="Fonts\One Slice.otf" />
+	  <Resource Include="Fonts\Sectar.otf" />
+	  <Resource Include="Resources\bg-forum.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Resources\bg.jpg" />
+	  <Resource Include="Resources\bggrey.jpg" />
+	  <Resource Include="Resources\bignews.png" />
+	  <Resource Include="Resources\discord.png" />
+	  <Resource Include="Resources\minus.png" />
+	  <Resource Include="Resources\minus2.png" />
+	  <Resource Include="Resources\newclose.png" />
+	  <Resource Include="Resources\newclose2.png" />
+	  <Resource Include="Resources\newclose3.png" />
+	  <Resource Include="Resources\newgear.png" />
+	  <Resource Include="Resources\news.png" />
+	  <Resource Include="Resources\parameters.png" />
+	  <Resource Include="Resources\reload.png" />
+	  <Resource Include="Resources\reload2.png" />
+	  <Resource Include="Resources\reload3.png" />
+	  <Resource Include="Resources\repair.png" />
+	  <Resource Include="Resources\side.jpg" />
+	  <Resource Include="Resources\site.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Resources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Components\" />
+	  <Folder Include="Enums\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="ArkanSound">
+	    <HintPath>ArkanSound.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
